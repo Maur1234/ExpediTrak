@@ -8,10 +8,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import ie.expenditrak.expenditrak.model.Expsense
+import kotlinx.android.synthetic.main.expense_list.view.constraintLayout
 
-class ExpenseAdapter(var expenseList:ArrayList<Expsense>, var context: Context): RecyclerView.Adapter<ExpenseAdapter.ViewHolder>() {
+class ExpenseAdapter(var expenseList:ArrayList<Expsense>, var context: Context,
+                     val listener: (Int) -> Unit ): RecyclerView.Adapter<ExpenseAdapter.ViewHolder>() {
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(expenseList[position], position)
+        holder.bindView(expenseList[position], position,listener)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder{
@@ -27,11 +30,16 @@ class ExpenseAdapter(var expenseList:ArrayList<Expsense>, var context: Context):
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var merchantName = itemView.findViewById<TextView>(R.id.merchant_name)
         var price = itemView.findViewById<TextView>(R.id.price_tag)
-        var imageView = itemView.findViewById<ImageView>(R.id.imageView)
+        var date = itemView.findViewById<TextView>(R.id.date)
 
-        fun bindView(expense: Expsense, pos:Int){
+        fun bindView(expense: Expsense, pos:Int, listener:(Int)-> Unit)= with(itemView){
             merchantName.text = "Merchant Name: ${expense.merchant}"
-            price.text = "Price: ${expense.price}"
+            price.text = "Price €: ${expense.price}"
+            date.text = "Date: ${expense.date}"
+
+            constraintLayout.setOnClickListener{listener(pos)}
+
+            //link for clicklistener with kotlin for recyclerviews https://www.andreasjakl.com/recyclerview-kotlin-style-click-listener-android/
         }
 
 
