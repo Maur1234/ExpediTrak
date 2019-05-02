@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "828615404470",
+    "firebase_url": "https://expenditrak-c10a9.firebaseio.com",
+    "project_id": "expenditrak-c10a9",
+    "storage_bucket": "expenditrak-c10a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828615404470:android:149d402b5c90c3a9",
+        "android_client_info": {
+          "package_name": "ie.expenditrak.expenditrak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828615404470-v1ilc9ftac8e8muehd8mfm392prqvire.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ie.expenditrak.expenditrak",
+            "certificate_hash": "b38c6268c1d9ed04c85f7b9b84b39f4589ef9b63"
+          }
+        },
+        {
+          "client_id": "828615404470-glvl50qaokcsq0qsrdgkroon5iecinu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZSIlnUlhatEtY5XhFoo_wVWDw45sHWMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828615404470-glvl50qaokcsq0qsrdgkroon5iecinu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
