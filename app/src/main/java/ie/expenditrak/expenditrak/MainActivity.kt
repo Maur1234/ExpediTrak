@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater.inflate(R.menu.main_menu, menu)
         return true
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun deleteExpense(id:String ){
-        val removeExp = database!!.getReference("expsense").child(id)
+        val removeExp = database!!.getReference("expense").child(id)
         AlertDialog.Builder(this)
                 .setTitle("Warning")
                 .setMessage("Are you sure you want to delete this item")

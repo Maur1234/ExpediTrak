@@ -1,4 +1,12 @@
 package ie.expenditrak.expenditrak.model
 
-class Expsense(var merchant:String,var date:String,var price:Double) {
+data class Expsense(var id:String? = null,
+                    var merchant:String? = null,
+                    var date:String? = null,
+                    var price:Double? = null){
+
+    override fun toString(): String {
+        return super.toString()
+    }
+
 }

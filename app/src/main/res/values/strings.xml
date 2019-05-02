@@ -12,4 +12,5 @@
     <string name="add_expense">Add Expense</string>
     <string name="date_purched">Date Purched</string>
     <string name="select_date">Select Date</string>
+    <string name="title_activity_main3">Main3Activity</string>
 </resources>
